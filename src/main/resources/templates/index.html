@@ -1,0 +1,28 @@
+<!DOCTYPE html> <!-- define the document -->
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"
+xml:th="http://www.thymeleaf.org">
+
+<head> <!-- metadata container -->
+    <meta charset="UTF-8">
+    <title>Hello Templates</title> <!-- page title -->
+
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+</head>
+<body>
+
+<h1>Hello Spring!</h1> <!-- page header message -->
+
+<p>This site was built by <span th:text="${author}"></span></p> <!-- display the site author -->
+
+<h2>My favorite food</h2> <!-- header for favorite food -->
+
+<ul> <!-- unordered list -->
+    <li th:each="food : ${favoriteFood}" th:text="${food}"></li> <!-- list the foods in my foods list -->
+</ul>
+
+<h2>Mountains and stuff</h2>
+
+<img src="../img/mountains.jpeg"> <!-- display a super cool image of mountains and stuff -->
+
+</body>
+</html>
